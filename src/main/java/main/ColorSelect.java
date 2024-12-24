@@ -11,8 +11,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+<<<<<<< HEAD
 import model.Dish;
 
+=======
+<<<<<<< HEAD
+import model.Dish;
+
+=======
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
 
 
 //色→野菜
@@ -20,6 +28,10 @@ import model.Dish;
 public class ColorSelect extends HttpServlet {
 
     @Override
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -39,12 +51,28 @@ public class ColorSelect extends HttpServlet {
             return;
         }
         
+<<<<<<< HEAD
+=======
+=======
+    //JSPでmethod="post"を使用しているので、サーブレット側ではdoPostメソッドを使う
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+    	
+        // ユーザーが選択した色を取得
+        String selectedColor = request.getParameter("color");
+
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
         // 色に基づく野菜のリストを取得
         List<String> vegetables = getVegetablesByColor(selectedColor);
 
         // 野菜リストをランダムに選択
         String randomVegetable = getRandomVegetable(vegetables);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
         // 選ばれた色と野菜をセット
         request.setAttribute("selectedColor", selectedColor);
         request.setAttribute("randomVegetable", randomVegetable);
@@ -78,20 +106,68 @@ public class ColorSelect extends HttpServlet {
                 vegetables.add("かぼちゃ");
                 break;
             case "赤色":
+<<<<<<< HEAD
+=======
+=======
+        //選ばれた色と野菜をセット
+        request.setAttribute("selectedColor", selectedColor); //
+        request.setAttribute("randomVegetable", randomVegetable);
+
+
+        // 結果ページに遷移
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+        dispatcher.forward(request, response);
+        }
+    
+    
+    private List<String> getVegetablesByColor(String color) {
+        List<String> vegetables = new ArrayList<>();
+        
+        switch (color) {
+            case "オレンジ":
+                vegetables.add("にんじん");
+                vegetables.add("かぼちゃ");
+                break;
+
+            case "赤":
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
                 vegetables.add("トマト");
                 vegetables.add("赤パプリカ");
                 vegetables.add("梅干し");
                 break;
+<<<<<<< HEAD
             case "黄色":
+=======
+<<<<<<< HEAD
+            case "黄色":
+=======
+
+            case "黄":
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
                 vegetables.add("とうもろこし");
                 vegetables.add("さつまいも");
                 vegetables.add("じゃがいも");
                 break;
+<<<<<<< HEAD
             case "緑色":
+=======
+<<<<<<< HEAD
+            case "緑色":
+=======
+
+            case "緑":
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
                 vegetables.add("ほうれん草");
                 vegetables.add("ブロッコリー");
                 vegetables.add("きゅうり");
                 break;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
             case "紫色":
                 vegetables.add("ブルーベリー");
                 vegetables.add("ナス");
@@ -100,6 +176,22 @@ public class ColorSelect extends HttpServlet {
                 vegetables.add("大根");
                 vegetables.add("白ネギ");
                 break;
+<<<<<<< HEAD
+=======
+=======
+
+            case "紫":
+                vegetables.add("ブルーベリー");
+                vegetables.add("ナス");
+                break;
+
+            case "白":
+                vegetables.add("大根");
+                vegetables.add("白ネギ");
+                break;
+
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
             default:
                 vegetables.add("選ばれた色に関連する情報がありません。");
                 break;
@@ -117,6 +209,15 @@ public class ColorSelect extends HttpServlet {
 }
 
 
+<<<<<<< HEAD
 
 
 
+=======
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f

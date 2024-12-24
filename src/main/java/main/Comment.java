@@ -1,7 +1,13 @@
 package main;
 
 import java.io.IOException;
+<<<<<<< HEAD
 import java.util.HashMap;
+=======
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
 import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
@@ -12,7 +18,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
 //野菜→コメント
 @WebServlet("/showComment")
 public class Comment extends HttpServlet {
@@ -56,10 +65,15 @@ public class Comment extends HttpServlet {
 	}
     
     
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
 	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 		
+<<<<<<< HEAD
 		//文字化けを防ぐ
 	    response.setContentType("text/html; charset=UTF-8");
 	    response.setCharacterEncoding("UTF-8");
@@ -84,9 +98,62 @@ public class Comment extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
         dispatcher.forward(request, response);
     }
+=======
+		
+		//文字化けを防ぐ
+	    response.setContentType("text/html; charset=UTF-8");
+	    response.setCharacterEncoding("UTF-8");
+=======
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+        
+        // 色からランダムに選ばれた野菜を取得
+        String vegetable = request.getParameter("vegetable");
+        
+        // 野菜に関する栄養コメントを取得
+        List<Comment> comments = getCommentsForVegetable(vegetable);
+        
+<<<<<<< HEAD
+        
+=======
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+        // 栄養コメントをリクエストに設定
+        request.setAttribute("comments", comments);
+        
+        // 栄養コメントを結果ページへ転送
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/result.jsp");
+        dispatcher.forward(request, response);
+    }
+    
+<<<<<<< HEAD
+	
+    // 野菜に関連するコメントを取得するメソッド
+    static List<Comment> getCommentsForVegetable(String vegetable) {
+=======
+    // 野菜に関連するコメントを取得するメソッド
+    private static List<Comment> getCommentsForVegetable(String vegetable) {
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+        List<Comment> comments = new ArrayList<>();
+        
+        // コメントが見つからなければデフォルトコメントを返す
+        String commentText = vegetableComments.getOrDefault
+        		(vegetable, "選ばれた野菜に関連するコメントがありません。");
+        
+        // コメントをリストに追加
+        comments.add(new Comment(commentText, vegetable));
+        
+        return comments;
+    }
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
 }
 
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f

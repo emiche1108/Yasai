@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColorDish（カラーディッシュ）</title>
     
+<<<<<<< HEAD
     
     <style>
     /* ページ全体の基本スタイル */
@@ -126,22 +127,53 @@
     
     
     </style>
+=======
+    <!-- CSSのリンク -->
+<<<<<<< HEAD
+    <link rel="stylesheet" type="text/css" href="/Yasai/css/style.css">
+    
+=======
+    <link rel="stylesheet" type="text/css" 
+    href="${pageContext.request.contextPath}/css/style.css">
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
     
 </head>
 
 
+<<<<<<< HEAD
 <body class="${greetingClass}">
 	<p>副菜提案アプリ「ColorDish」へようこそ。<br></p>
     <h1>${greeting}</h1>
+=======
+<<<<<<< HEAD
+<body class="${greetingClass}"
+	<p>副菜提案アプリ「ColorDish」へようこそ。<br></p>
+    <h1>${greeting}</h1>
+=======
+<body>
+    <h1>${greeting}</h1>
+    	<p>簡単副菜提案アプリ「ColorDish（カラーディッシュ）」へようこそ。
+    	始めるには以下のボタンを押してください。</p>
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
     
     <!-- 始めるボタン -->
     <form action="colorSelect" method="get">
     	<button type="submit">始める</button>
     </form>
+<<<<<<< HEAD
     
     
     <!--フッターのリンク -->
     <jsp:include page="/WEB-INF/jsp/footer.jsp" />
+=======
+<<<<<<< HEAD
+    
+    <jsp:include page="/WEB-INF/jsp/footer.jsp" />
+=======
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
+>>>>>>> 4976e6a0c7407dff8b999dad23553ccb31385f8f
 
 </body>
 
