@@ -51,7 +51,10 @@
 
     <!-- ロゴやアイコンがあれば表示 -->
     <img src="your-logo.png" alt="準備中" class="logo">
+<<<<<<< HEAD
     <jsp:include page="/WEB-INF/jsp/footer.jsp" />
+=======
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
 
 </body>
 

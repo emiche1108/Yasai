@@ -11,8 +11,12 @@ public class VegeAndRecipe {
     
     // 野菜に基づいたレシピを取得するメソッド
     public static List<Dish> getRecipesForVegetable(String vegetable) {
+<<<<<<< HEAD
     	// 空箱
     	List<Dish> recipes = new ArrayList<>();
+=======
+        List<Dish> recipes = new ArrayList<>();
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
 
         switch (vegetable) {
             case "にんじん":
@@ -62,7 +66,11 @@ public class VegeAndRecipe {
 
             case "ブロッコリー":
                 recipes.add(new Dish("ブロッコリーのチーズ焼き", "チーズたっぷりの焼き物"));
+<<<<<<< HEAD
                 recipes.add(new Dish("ブロッコリーのおかか和え", "香り高いおかかとブロッコリーの相性が抜群"));
+=======
+                recipes.add(new Dish("ブロッコリーの茹でサラダ", "シンプルで健康的なサラダ"));
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
                 break;
 
             case "きゅうり":
@@ -93,7 +101,11 @@ public class VegeAndRecipe {
                 recipes.add(new Dish("基本サラダ", "シンプルな野菜サラダ"));
                 break;
         }
+<<<<<<< HEAD
         //空箱に内容を入れてあげる
+=======
+
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
         return recipes;
     }
 }

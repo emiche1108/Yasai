@@ -1,5 +1,6 @@
 package model;
 
+<<<<<<< HEAD
 public class Comment {
     private String commentText;
     private String vegetable;
@@ -55,3 +56,23 @@ public class Comment {
 
 
 
+=======
+
+public class Comment {
+        private String commentText;
+        private String vegetable;
+
+        public Comment(String commentText, String vegetable) {
+            this.commentText = commentText;
+            this.vegetable = vegetable;
+        }
+
+        public String getCommentText() {
+            return commentText;
+        }
+
+        public String getVegetable() {
+            return vegetable;
+        }
+    }
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3

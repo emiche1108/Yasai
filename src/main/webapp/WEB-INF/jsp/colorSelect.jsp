@@ -44,6 +44,7 @@
     
     <!-- 色選択ボタン -->
     <!-- colorSelect.jspに飛ぶ設定  -->
+<<<<<<< HEAD
     <form action="ColorSelect" method="post"> 
         <div class="button-container">
             <button type="submit" name="color" value="赤色" class="color-button red">赤色</button>
@@ -56,6 +57,18 @@
     </form>
     
     <jsp:include page="/WEB-INF/jsp/footer.jsp" />
+=======
+    <form action="colorSelect" method="post"> 
+        <div class="button-container">
+            <button type="submit" name="color" value="赤" class="color-button red">赤色</button>
+            <button type="submit" name="color" value="オレンジ" class="color-button orange">オレンジ色</button>
+            <button type="submit" name="color" value="黄" class="color-button yellow">黄色</button>
+            <button type="submit" name="color" value="緑" class="color-button green">緑色</button>
+            <button type="submit" name="color" value="紫" class="color-button blue">紫色</button>
+            <button type="submit" name="color" value="白" class="color-button white">白色</button>
+        </div>
+    </form>
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
 </body>
 
 

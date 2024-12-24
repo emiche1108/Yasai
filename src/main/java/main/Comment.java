@@ -57,6 +57,7 @@ public class Comment extends HttpServlet {
 	}
     
     
+<<<<<<< HEAD
 	@Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -65,6 +66,11 @@ public class Comment extends HttpServlet {
 		//文字化けを防ぐ
 	    response.setContentType("text/html; charset=UTF-8");
 	    response.setCharacterEncoding("UTF-8");
+=======
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
         
         // 色からランダムに選ばれた野菜を取得
         String vegetable = request.getParameter("vegetable");
@@ -72,7 +78,10 @@ public class Comment extends HttpServlet {
         // 野菜に関する栄養コメントを取得
         List<Comment> comments = getCommentsForVegetable(vegetable);
         
+<<<<<<< HEAD
         
+=======
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
         // 栄養コメントをリクエストに設定
         request.setAttribute("comments", comments);
         
@@ -81,9 +90,14 @@ public class Comment extends HttpServlet {
         dispatcher.forward(request, response);
     }
     
+<<<<<<< HEAD
 	
     // 野菜に関連するコメントを取得するメソッド
     static List<Comment> getCommentsForVegetable(String vegetable) {
+=======
+    // 野菜に関連するコメントを取得するメソッド
+    private static List<Comment> getCommentsForVegetable(String vegetable) {
+>>>>>>> 4b8df0a50088db22eeda3ab243d12a5b37dfe2d3
         List<Comment> comments = new ArrayList<>();
         
         // コメントが見つからなければデフォルトコメントを返す
